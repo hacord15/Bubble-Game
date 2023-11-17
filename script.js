@@ -1,11 +1,11 @@
-var timer = 60;   // kitne seconds ka time dena hai vo yaha deside hoga 
+var timer = 10;   // kitne seconds ka time dena hai vo yaha deside hoga 
 var score = 0;
-
-
+var hitrn = 0;
+// bubble event------------------------------------
 // jispe click karoge wo element par event raise hoga, aur event listener 
 // naa milne prr event ke parent par listerner dhundhega, waha bhi na milne prr
 //  event parent ke parent ke parent par listener dhunega 
-
+// ---------------------------------------------------------------------------------increaseScore() 
 
 //Bubble Making 
 function makebubble() {
@@ -18,8 +18,8 @@ function makebubble() {
     document.querySelector("#pbtm").innerHTML = clutter;
 }
 function getNewHit() {
-    var rn = Math.floor(Math.random() * 10);
-    document.querySelector("#hitval").textContent = rn;
+    hitrn= Math.floor(Math.random() * 10);
+    document.querySelector("#hitval").textContent = hitrn;
 }
 
 
@@ -33,6 +33,7 @@ function runTimer() {
         }
         else {
             clearInterval(timerint);
+            document.querySelector("#pbtm").innerHTML = `<h1>Game Over</h1>`
         }
 
     }, 1000);
@@ -45,6 +46,19 @@ function increaseScore() {
 
 
 
+document.querySelector("#pbtm").addEventListener("click",function(dets){
+ var clickednum = Number(dets.target.textContent);
+ if(clickednum === hitrn){
+    increaseScore();
+    makebubble();
+    getNewHit();
+ }
+});
+
+
+// .target VO HOTA HAI  jispar click hua hota hai---isse div aaya 
+// and we add .textContent isse div ka sirf text aayega 
+// Pahle ye ek string isko hame ek number banana padega 
 
 
 
@@ -52,3 +66,4 @@ function increaseScore() {
 makebubble();
 runTimer();
 getNewHit();
+// increaseScore();
