@@ -52,6 +52,11 @@ html,body{
     border-radius: 5px;
 }
 #pbtm{
+    /* -----------------Game over--------------------- */
+    align-items: center;
+    justify-content: center;
+    /* ------------------------------------------------------- */
+
     padding: 20px; /* isse circle pr fark padega  */
     width: 100%;
     gap: 10px;  /* un dono ke beech me gap dene ke liye  */
