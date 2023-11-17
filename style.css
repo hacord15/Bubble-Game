@@ -1,0 +1,80 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family:"Gilroy";
+    box-sizing: border-box;
+}
+html,body{
+    width: 100%;
+    height: 100%;
+}
+#main{
+    width: 100%;
+    height: 100%;
+    display: flex;  /*   ye z-axis se beech me lata hai */
+    align-items: center; /* ye upar se beech me lata hai  */
+    justify-content: center;  /* ye left se center me lata hai */
+    background-color: rgb(131, 207, 131);
+}
+#panel{
+    overflow: hidden; /* isse ye hota hai jo pahle wla div hai to ussi ke upar adjust ho jata hai---aur same selecters lg jaayenge */
+    width: 80%;
+    height: 90%;
+    border-radius: 10px;  /*  ye curve lata hai edges prr----kone pr finishing krna  */
+    background-color: #fff;
+}
+#ptop{
+    padding: 0px 30%;
+    justify-content: space-between;
+    align-items: center; /* top se center me krna  */
+    width: 100%;
+    display: flex;
+    color: #fff;
+    height: 100px;
+    background-color: rgb(71, 110, 71);
+}
+.elem{
+    display: flex;
+    align-items: center;
+    width: 10%;
+    gap: 20px;
+}
+.elem h3{
+    font-weight: 500;
+    font-size: 22px;
+}
+.box {
+    color: #33a510;
+    font-weight: 600; /* This font-weight makes the text bold */
+    font-size: 20px;
+    padding: 10px 20px;
+    background-color: #fff;
+    border-radius: 5px;
+}
+#pbtm{
+    padding: 20px; /* isse circle pr fark padega  */
+    width: 100%;
+    gap: 10px;  /* un dono ke beech me gap dene ke liye  */
+    display: flex;  /* ye isliye kyuki bubblr ko agal bagal krne ke liye */
+    flex-wrap: wrap; /*  koi bhi element next line me laane ke liye  */
+    /* calc ka use hum percentage ko pixel se minus krne ke liye krte hai  */
+    /* space lekar use krenge to hi output milega nhi to aise nhi aayega  */
+    /* ptop ki height 100px hai to usme minus hua hai */
+    height: calc(100% - 100px);  
+    /* background-color: black;  ye to check krne ke liye ye color liya tha ki work kr rha h ki nhi */
+}
+.bubble{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    background-color: rgb(71, 110, 71);
+    border-radius: 50%; /*  isse rectangle circle ban jata hai  */
+    font-weight: 500;
+    color: #fff; /*  ye isliye ki jo bhi hum likhenge wo white ke form me aayega  */
+}
+.bubble:hover{
+    background-color: #285f1b;
+    cursor: pointer;
+}
