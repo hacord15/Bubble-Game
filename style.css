@@ -62,9 +62,7 @@ html,body{
     gap: 10px;  /* un dono ke beech me gap dene ke liye  */
     display: flex;  /* ye isliye kyuki bubblr ko agal bagal krne ke liye */
     flex-wrap: wrap; /*  koi bhi element next line me laane ke liye  */
-    /* calc ka use hum percentage ko pixel se minus krne ke liye krte hai  */
-    /* space lekar use krenge to hi output milega nhi to aise nhi aayega  */
-    /* ptop ki height 100px hai to usme minus hua hai */
+
     height: calc(100% - 100px);  
     /* background-color: black;  ye to check krne ke liye ye color liya tha ki work kr rha h ki nhi */
 }
